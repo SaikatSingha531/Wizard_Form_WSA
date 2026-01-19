@@ -6,13 +6,14 @@ import { Button, Box, Paper, Typography, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { GrFormNextLink } from "react-icons/gr";
 import { useContext } from "react";
+import bg from "../assets/formBG.jpg";
 import { PersonalContext } from "../Hooks/Context/PersonalDetails/CreatePersonalContext";
 import type {
   PersonalContextType,
   PersonalFormData,
 } from "../Typescript/Interface";
 
-const backgroundImage = "/src/assets/formBG.jpg";
+const backgroundImage = bg;
 
 const PersonalInfo = () => {
   const navigate = useNavigate();

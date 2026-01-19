@@ -7,12 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 import { useContext } from "react";
 import { AddressContext } from "../Hooks/Context/AddressDetails/CreateAddressContext";
+import bg from "../assets/formBG.jpg";
 import type {
   AddressContextType,
   AddressFormData,
 } from "../Typescript/Interface";
 
-const backgroundImage = "/src/assets/formBG.jpg";
+const backgroundImage = bg;
 
 const AddressInfo = () => {
   const navigate = useNavigate();
