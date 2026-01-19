@@ -1,12 +1,26 @@
 import { TextField } from "@mui/material";
+import type {
+  FieldError,
+  UseFormRegister,
+  FieldValues,
+  Path,
+} from "react-hook-form";
 
-function DynamicInput({
+interface DynamicInputProps<T extends FieldValues> {
+  name: Path<T>;
+  label: string;
+  type?: string;
+  register: UseFormRegister<T>;
+  error?: FieldError;
+}
+
+function DynamicInput<T extends FieldValues>({
   name,
   label,
   type = "text",
   register,
   error,
-}) {
+}: DynamicInputProps<T>) {
   return (
     <TextField
       fullWidth
